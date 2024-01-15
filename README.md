@@ -32,7 +32,7 @@ spec:
           image: quay.io/argoprojlabs/argocd-extension-installer:v0.0.1
           env:
           - name: EXTENSION_URL
-            value: https://github.com/argoproj-labs/argocd-extension-metrics/releases/download/v1.0.0/extension.tar.gz
+            value: https://github.com/jsolana/argocd-hello-extension/releases/download/v0.0.1/extension.tar
           volumeMounts:
             - name: extensions
               mountPath: /tmp/extensions/
