@@ -1,15 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: busibox-echo
+  name: busybox-echo
   namespace: argocd
 spec:
   destination:
-    namespace: busibox-echo
+    namespace: busybox-echo
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: busibox/echo
+    path: busybox/echo
     repoURL: https://github.com/jsolana/argocd-applications
     targetRevision: HEAD
   syncPolicy:
