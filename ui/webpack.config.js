@@ -6,6 +6,7 @@ const config = {
   entry: {
     extension: './src/index.tsx',
   },
+  mode: 'production',
   output: {
     filename: `extensions-${extName}.js`,
     path: __dirname + `/dist/resources/extension-${extName}.js`,
