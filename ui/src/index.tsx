@@ -4,9 +4,9 @@
   };
   window?.extensionsAPI?.registerResourceExtension(
    component,
-   "argoproj.io",
-   "Rollout",
-   "Rollout",
-   { icon: "fa-sharp fa-light fa-bars-progress fa-lg" }
+   "argoproj.io'/'Application",
+   "argoproj.io'/'Application",
+   "Hello World",
+   { icon: "fa-solid fa-not-equal" }
  );
 })(window);
