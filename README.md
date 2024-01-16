@@ -61,7 +61,7 @@ Install Arco CD in a k8s cluster locally using `kind`
 
 ```
 
-To check the installation:
+Install the extension. To check the installation:
 
 ```bash
   kubectl logs -c hello-extension  <pod-name> -n argocd
