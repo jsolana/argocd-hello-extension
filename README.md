@@ -23,6 +23,12 @@ kubectl get deployment argocd-server -o yaml -n argocd > deployment.yaml
 ```
 
 ```yaml
+      container:
+      ...
+      volumeMounts:
+        ...
+      - name: extensions
+        mountPath: /tmp/extensions/
       initContainers:
         - name: hello-extension
           image: quay.io/argoprojlabs/argocd-extension-installer:v0.0.1
@@ -53,6 +59,12 @@ Install Arco CD in a k8s cluster locally using `kind`
     kubectl port-forward svc/argocd-server -n argocd 8080:443
     kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath='{.data.password}' | base64 -d
 
+```
+
+To check the installation:
+
+```bash
+  kubectl logs -c hello-extension  <pod-name> -n argocd
 ```
 
 [1]: https://github.com/argoproj-labs/argocd-extension-installer
