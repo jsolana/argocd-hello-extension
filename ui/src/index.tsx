@@ -9,4 +9,13 @@
    "Hello World",
    { icon: "fa-solid fa-not-equal" }
  );
+ window?.extensionsAPI?.registerResourceExtension(
+  component,
+  "*",
+  "*",
+  "Nice extension"
+);
+window?.extensionsAPI?.registerResourceExtension(component, '', 'Pod', 'Metrics1', { icon: "fa fa-chart-area" });
+window?.extensionsAPI?.registerResourceExtension(component, '*', 'Deployment', 'Metrics2', { icon: "fa fa-chart-area" });
 })(window);
+
