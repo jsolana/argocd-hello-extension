@@ -4,8 +4,8 @@
   };
   window?.extensionsAPI?.registerResourceExtension(
    component,
-   "argoproj.io'/'Application",
-   "argoproj.io'/'Application",
+   "argoproj.io/Application",
+   "argoproj.io/Application",
    "Hello World",
    { icon: "fa-solid fa-not-equal" }
  );
@@ -17,5 +17,7 @@
 );
 window?.extensionsAPI?.registerResourceExtension(component, '', 'Pod', 'Metrics1', { icon: "fa fa-chart-area" });
 window?.extensionsAPI?.registerResourceExtension(component, '*', 'Deployment', 'Metrics2', { icon: "fa fa-chart-area" });
+window?.extensionsAPI?.registerResourceExtension(component, '*', 'Application', 'Metrics3', { icon: "fa fa-chart-area" });
+window?.extensionsAPI?.registerResourceExtension(component, 'Application', 'Application', 'Metrics4', { icon: "fa fa-chart-area" });
 })(window);
 
