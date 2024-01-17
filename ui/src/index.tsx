@@ -3,7 +3,7 @@
     return React.createElement("div", {}, "Proposed manifest diff(s)");
   };
   
-window?.extensionsAPI?.registerResourceExtension(component, '*', 'Application', 'Proposed diff', { icon: "fa fa fa-file-medical" });
+window?.extensionsAPI?.registerResourceExtension(component, '*', 'Application', 'Proposed manifest diff', { icon: "fa fa fa-file-medical" });
 
 
 
