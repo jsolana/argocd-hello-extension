@@ -19,5 +19,34 @@ window?.extensionsAPI?.registerResourceExtension(component, '', 'Pod', 'Metrics1
 window?.extensionsAPI?.registerResourceExtension(component, '*', 'Deployment', 'Metrics2', { icon: "fa fa-chart-area" });
 window?.extensionsAPI?.registerResourceExtension(component, '*', 'Application', 'Metrics3', { icon: "fa fa-chart-area" });
 window?.extensionsAPI?.registerResourceExtension(component, 'Application', 'Application', 'Metrics4', { icon: "fa fa-chart-area" });
+
+
+const flyoutComponent = (props: {
+  openFlyout: () => any
+}) => {
+return React.createElement(
+  "div",
+  { 
+    style: { padding: "10px" },
+    onClick: () => props.openFlyout()
+  },
+  "Hello World"
+);
+};
+const flyout = () => {
+return React.createElement(
+  "div",
+  { style: { padding: "10px" } },
+  "This is a flyout"
+);
+};
+window.extensionsAPI.registerStatusPanelExtension(
+  flyoutComponent,
+"My Extension",
+"my_extension",
+flyout
+);
+
+
 })(window);
 
